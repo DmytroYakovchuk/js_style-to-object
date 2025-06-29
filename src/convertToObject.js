@@ -16,11 +16,8 @@ function convertToObject(sourceString) {
       return;
     }
 
-    const [key, values] = trim.split(':');
+    const [key, values = ''] = trim.split(':');
 
-    if (!key && values === undefined) {
-      return;
-    }
     objStyle[key.trim()] = values.trim();
   });
 
